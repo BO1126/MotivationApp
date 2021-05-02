@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MotivationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-FA-mUB">
+                                <rect key="frame" x="188" y="736" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAC-Ms-inf">
+                                <rect key="frame" x="294" y="740" width="20" height="22"/>
+                                <state key="normal" image="chevron.forward.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpInsidenextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ptv-kb-PUp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adD-Dn-7F1">
+                                <rect key="frame" x="100" y="740" width="20" height="22"/>
+                                <state key="normal" image="chevron.backward.circle" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivation text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dY-vY-KbK">
+                                <rect key="frame" x="130.5" y="194" width="153" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-YT-HVw">
+                                <rect key="frame" x="156" y="273" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.88532477320971825" blue="0.99353095065708275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="adD-Dn-7F1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="5xt-Z2-0cM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eQe-FA-mUB" secondAttribute="bottom" constant="96" id="Fzo-df-IM8"/>
+                            <constraint firstItem="7dY-vY-KbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="QGM-My-VyP"/>
+                            <constraint firstItem="oca-YT-HVw" firstAttribute="top" secondItem="7dY-vY-KbK" secondAttribute="bottom" constant="50" id="VWB-sU-3oy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CAC-Ms-inf" secondAttribute="bottom" constant="100" id="VzE-Y6-nld"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CAC-Ms-inf" secondAttribute="trailing" constant="100" id="ZJh-Ny-Q8o"/>
+                            <constraint firstItem="eQe-FA-mUB" firstAttribute="leading" secondItem="adD-Dn-7F1" secondAttribute="trailing" constant="68" id="cTL-xs-dLf"/>
+                            <constraint firstItem="7dY-vY-KbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKy-UY-fRN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adD-Dn-7F1" secondAttribute="bottom" constant="100" id="lPF-WY-eBj"/>
+                            <constraint firstItem="oca-YT-HVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p7L-cW-yLe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="motivationPersonNameLabel" destination="oca-YT-HVw" id="WaQ-Dc-QOH"/>
+                        <outlet property="motivationTextLabel" destination="7dY-vY-KbK" id="XlR-XB-S1h"/>
+                        <outlet property="nextButton" destination="CAC-Ms-inf" id="VVb-Xf-hlV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="77"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.forward.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
