@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D9C36F7E2C413E7F6A368A9 /* Pods_MotivationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0124A10F7CD8B357E0B59801 /* Pods_MotivationApp.framework */; };
 		426C8936263D788D00433EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C8935263D788D00433EB3 /* AppDelegate.swift */; };
 		426C8938263D788D00433EB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C8937263D788D00433EB3 /* SceneDelegate.swift */; };
 		426C893A263D788D00433EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C8939263D788D00433EB3 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0124A10F7CD8B357E0B59801 /* Pods_MotivationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotivationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2193F282195A5AFD8D0201EC /* Pods-MotivationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotivationApp.release.xcconfig"; path = "Target Support Files/Pods-MotivationApp/Pods-MotivationApp.release.xcconfig"; sourceTree = "<group>"; };
 		426C8932263D788D00433EB3 /* MotivationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotivationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426C8935263D788D00433EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		426C8937263D788D00433EB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		426C893E263D788E00433EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426C8941263D788E00433EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426C8943263D788E00433EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A35EC014FC8504BD6AE76E3B /* Pods-MotivationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotivationApp.debug.xcconfig"; path = "Target Support Files/Pods-MotivationApp/Pods-MotivationApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9C36F7E2C413E7F6A368A9 /* Pods_MotivationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				426C8934263D788D00433EB3 /* MotivationApp */,
 				426C8933263D788D00433EB3 /* Products */,
+				A6E7C4EBD1C029E8A0D7B502 /* Pods */,
+				61BD2E8A2657FC9303F9EA01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = MotivationApp;
 			sourceTree = "<group>";
 		};
+		61BD2E8A2657FC9303F9EA01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0124A10F7CD8B357E0B59801 /* Pods_MotivationApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6E7C4EBD1C029E8A0D7B502 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A35EC014FC8504BD6AE76E3B /* Pods-MotivationApp.debug.xcconfig */,
+				2193F282195A5AFD8D0201EC /* Pods-MotivationApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 426C8946263D788E00433EB3 /* Build configuration list for PBXNativeTarget "MotivationApp" */;
 			buildPhases = (
+				F7D88A6674F23CDC60B198FC /* [CP] Check Pods Manifest.lock */,
 				426C892E263D788D00433EB3 /* Sources */,
 				426C892F263D788D00433EB3 /* Frameworks */,
 				426C8930263D788D00433EB3 /* Resources */,
+				3934498432873A6129B3A32E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3934498432873A6129B3A32E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotivationApp/Pods-MotivationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotivationApp/Pods-MotivationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotivationApp/Pods-MotivationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7D88A6674F23CDC60B198FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotivationApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		426C892E263D788D00433EB3 /* Sources */ = {
@@ -283,11 +351,13 @@
 		};
 		426C8947263D788E00433EB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A35EC014FC8504BD6AE76E3B /* Pods-MotivationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z44PNMNA6D;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = MotivationApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,11 +373,13 @@
 		};
 		426C8948263D788E00433EB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2193F282195A5AFD8D0201EC /* Pods-MotivationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z44PNMNA6D;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = MotivationApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

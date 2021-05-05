@@ -108,6 +108,7 @@ class ViewController: UIViewController {
         
         UIView.transition(with: view, duration: 0.7, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         
+        
         changeRandomBackgroundColor()
         
         if checkNumberForbackButton % 2 == 0 {
