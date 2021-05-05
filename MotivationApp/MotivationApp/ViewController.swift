@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Hero
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -20,6 +22,7 @@ class ViewController: UIViewController {
         "피터 드러커","10분 뒤와 10년 후를 동시에 생각하라."
         
     ]
+    let userNotificationCenter = UNUserNotificationCenter.current()
     
     var motivationPersonName : String = String()
     var motivationText : String = String()
@@ -36,6 +39,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        requestNotificationAuthorization()
+        sendNotification(seconds: 10)
+        
         //backButton 비활성화
         backButton.isEnabled = false
         
@@ -45,6 +51,38 @@ class ViewController: UIViewController {
         motivationPersonNameLabel.text = "\(motivationPersonName)"
         motivationTextLabel.text = "\(motivationText)"
         
+        
+    }
+    
+    // 알림 기능
+    func requestNotificationAuthorization() {
+        let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
+        
+        userNotificationCenter.requestAuthorization(options: authOptions) { success, error in
+            if let error = error {
+                print("Error: \(error)")
+            }
+        }
+    }
+
+    func sendNotification(seconds: Double) {
+        let notificationContent = UNMutableNotificationContent()
+        
+        let notificationContentBodyText : String = "\(motivationText)"
+        
+        notificationContent.title = "오늘의 조언"
+        notificationContent.body = notificationContentBodyText
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
+        let request = UNNotificationRequest(identifier: "testNotification",
+                                            content: notificationContent,
+                                            trigger: trigger)
+
+        userNotificationCenter.add(request) { error in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
     }
     
     
@@ -100,6 +138,7 @@ class ViewController: UIViewController {
         backButton.isEnabled = true
         
         
+        
     }
     
     
@@ -127,7 +166,6 @@ class ViewController: UIViewController {
         backButton.isEnabled = false
         
     }
-    
     
 
 }

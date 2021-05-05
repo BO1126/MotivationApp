@@ -47,6 +47,9 @@
                                 <rect key="frame" x="182.5" y="734" width="49" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="btnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJ2-lX-z38"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +66,10 @@
                             <constraint firstItem="oca-YT-HVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p7L-cW-yLe"/>
                             <constraint firstItem="eQe-FA-mUB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vcr-42-8qg"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="adD-Dn-7F1" id="nkq-a4-xQ2"/>
