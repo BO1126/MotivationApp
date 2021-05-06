@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Show"/>
                                 <connections>
-                                    <action selector="btnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJ2-lX-z38"/>
+                                    <action selector="showNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8F-R9-Exh"/>
                                 </connections>
                             </button>
                         </subviews>

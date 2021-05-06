@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         requestNotificationAuthorization()
         sendNotification(seconds: 10)
         
-        //backButton 비활성화
+        // BackButton disable
         backButton.isEnabled = false
         
         motivationPersonName = Motivations[0]
@@ -51,42 +51,10 @@ class ViewController: UIViewController {
         motivationPersonNameLabel.text = "\(motivationPersonName)"
         motivationTextLabel.text = "\(motivationText)"
         
-        
-    }
-    
-    // 알림 기능
-    func requestNotificationAuthorization() {
-        let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
-        
-        userNotificationCenter.requestAuthorization(options: authOptions) { success, error in
-            if let error = error {
-                print("Error: \(error)")
-            }
-        }
-    }
-
-    func sendNotification(seconds: Double) {
-        let notificationContent = UNMutableNotificationContent()
-        
-        let notificationContentBodyText : String = "\(motivationText)"
-        
-        notificationContent.title = "오늘의 조언"
-        notificationContent.body = notificationContentBodyText
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
-        let request = UNNotificationRequest(identifier: "testNotification",
-                                            content: notificationContent,
-                                            trigger: trigger)
-
-        userNotificationCenter.add(request) { error in
-            if let error = error {
-                print("Notification Error: ", error)
-            }
-        }
     }
     
     
-    // 첫줄의 길이에따라 폰트 크기 변경해주는 함수
+    // FistLine check and FontSize change function
     func checkFontSize(motivationText : String){
         let motivationTextFirstLine = motivationText.firstIndex(of: "\n") ?? motivationText.endIndex
         
@@ -101,17 +69,50 @@ class ViewController: UIViewController {
         }
     }
     
-    // 랜덤으로 rgb값을 생성하여 애니메이션이 작동하며 배경색을 바꿔주는 함수
+    
+    // Random Background Color function
     func changeRandomBackgroundColor(){
         let r : CGFloat = CGFloat.random(in: 0.7...1)
         let g : CGFloat = CGFloat.random(in: 0.7...1)
         let b : CGFloat = CGFloat.random(in: 0.7...1)
         
-        
         self.view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
     }
     
-    // nextButton 터치 시 발생하는 액션
+    
+    // Notification function
+    func requestNotificationAuthorization() {
+        let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
+        
+        userNotificationCenter.requestAuthorization(options: authOptions) { success, error in
+            if let error = error {
+                print("Error: \(error)")
+            }
+        }
+    }
+
+    
+    func sendNotification(seconds: Double) {
+        let notificationContent = UNMutableNotificationContent()
+        
+        notificationContent.title = "이정우"
+        notificationContent.body  = "집에서 쉬면서 코딩이나 하고 싶다."
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
+        let request = UNNotificationRequest(identifier: "mainNotification",
+                                            content: notificationContent,
+                                            trigger: trigger)
+
+        userNotificationCenter.add(request) { error in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
+        
+    }
+    
+    
+    // NextButton Action
     @IBAction func touchUpInsidenextButton(){
         checkNumberForbackButton = randomMotivationNumber
         
@@ -142,7 +143,7 @@ class ViewController: UIViewController {
     }
     
     
-    // backButton 터치 시 발생하는 액션
+    // BackButton Action
     @IBAction func touchUpInsidebackButton(){
         
         UIView.transition(with: view, duration: 0.7, options: .transitionFlipFromLeft, animations: nil, completion: nil)
@@ -167,6 +168,11 @@ class ViewController: UIViewController {
         
     }
     
+    
+    // ShowButton Action
+    @IBAction func showNotification(_ sender : Any){
+        
+    }
 
 }
 
