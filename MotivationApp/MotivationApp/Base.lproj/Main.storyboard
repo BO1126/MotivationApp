@@ -44,11 +44,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-FA-mUB">
-                                <rect key="frame" x="182.5" y="734" width="49" height="36"/>
+                                <rect key="frame" x="186.5" y="734" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Show"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="showNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8F-R9-Exh"/>
+                                    <segue destination="qEQ-yd-nK7" kind="presentation" id="XDo-wQ-t4J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,10 +66,6 @@
                             <constraint firstItem="oca-YT-HVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p7L-cW-yLe"/>
                             <constraint firstItem="eQe-FA-mUB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vcr-42-8qg"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="NO"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="adD-Dn-7F1" id="nkq-a4-xQ2"/>
@@ -81,6 +77,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="77"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="G1P-bm-3C5">
+            <objects>
+                <viewController id="qEQ-yd-nK7" customClass="SecondViewController" customModule="MotivationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Km-hX-vhf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmf-PO-7U2">
+                                <rect key="frame" x="176" y="700" width="62" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbk-FR-uJt">
+                                <rect key="frame" x="114" y="300" width="186" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MX0-Jz-nhZ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gbk-FR-uJt" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="QQz-aI-aRK"/>
+                            <constraint firstItem="MX0-Jz-nhZ" firstAttribute="bottom" secondItem="Pmf-PO-7U2" secondAttribute="bottom" constant="60" id="UMb-hm-8HI"/>
+                            <constraint firstItem="Gbk-FR-uJt" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="300" id="a6C-m4-wFW"/>
+                            <constraint firstItem="Pmf-PO-7U2" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="ji1-xc-VMM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hOH-he-doT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9FB-Oi-FLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="76"/>
         </scene>
     </scenes>
     <resources>

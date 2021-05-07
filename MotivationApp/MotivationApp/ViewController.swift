@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         requestNotificationAuthorization()
-        sendNotification(seconds: 10)
+        sendNotification(seconds: 1)
         
         // BackButton disable
         backButton.isEnabled = false
@@ -169,10 +169,6 @@ class ViewController: UIViewController {
     }
     
     
-    // ShowButton Action
-    @IBAction func showNotification(_ sender : Any){
-        
-    }
 
 }
 
