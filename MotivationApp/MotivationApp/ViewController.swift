@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     
-    // FistLine check and FontSize change function
+    // Check FistLine and change FontSize function
     func checkFontSize(motivationText : String){
         let motivationTextFirstLine = motivationText.firstIndex(of: "\n") ?? motivationText.endIndex
         
@@ -80,7 +80,8 @@ class ViewController: UIViewController {
     }
     
     
-    // Notification function
+    // Notification functions
+    
     func requestNotificationAuthorization() {
         let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
         
