@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-YT-HVw">
-                                <rect key="frame" x="156" y="376.5" width="102" height="21"/>
+                                <rect key="frame" x="156" y="513" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.029588952704704394" green="0.029417918296006682" blue="0.029759987113402109" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="시간 설정"/>
                                 <connections>
-                                    <action selector="presentSecondVC" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2e-DE-jIZ"/>
                                     <segue destination="qEQ-yd-nK7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XDo-wQ-t4J"/>
                                 </connections>
                             </button>
@@ -63,10 +62,10 @@
                         <constraints>
                             <constraint firstItem="adD-Dn-7F1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="5xt-Z2-0cM"/>
                             <constraint firstItem="xfT-jT-lkh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fw5-Uh-afy"/>
+                            <constraint firstItem="eQe-FA-mUB" firstAttribute="top" secondItem="oca-YT-HVw" secondAttribute="bottom" constant="200" id="Jct-mY-6Ix"/>
                             <constraint firstItem="7dY-vY-KbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="QGM-My-VyP"/>
                             <constraint firstItem="xfT-jT-lkh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QmK-UQ-BaV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eQe-FA-mUB" secondAttribute="bottom" constant="92" id="TpS-hX-UH5"/>
-                            <constraint firstItem="oca-YT-HVw" firstAttribute="top" secondItem="7dY-vY-KbK" secondAttribute="bottom" constant="40" id="VWB-sU-3oy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CAC-Ms-inf" secondAttribute="bottom" constant="100" id="VzE-Y6-nld"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CAC-Ms-inf" secondAttribute="trailing" constant="100" id="ZJh-Ny-Q8o"/>
                             <constraint firstItem="7dY-vY-KbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKy-UY-fRN"/>
@@ -95,9 +94,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmf-PO-7U2">
-                                <rect key="frame" x="176.5" y="734" width="61" height="48"/>
+                                <rect key="frame" x="151.5" y="734" width="111" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="시작!"/>
+                                <state key="normal" title="집중 시작"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxU-ag-0d1">
                                 <rect key="frame" x="362" y="44" width="32" height="34"/>

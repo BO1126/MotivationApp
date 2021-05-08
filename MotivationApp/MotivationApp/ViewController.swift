@@ -7,7 +7,6 @@
 
 import UIKit
 import Hero
-import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -22,7 +21,6 @@ class ViewController: UIViewController {
         "피터 드러커","10분 뒤와 10년 후를 동시에 생각하라."
         
     ]
-    let userNotificationCenter = UNUserNotificationCenter.current()
     
     var motivationPersonName : String = String()
     var motivationText : String = String()
@@ -38,10 +36,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        requestNotificationAuthorization()
-        sendNotification(seconds: 1)
-        
         // BackButton disable
         backButton.isEnabled = false
         
@@ -52,6 +46,7 @@ class ViewController: UIViewController {
         motivationTextLabel.text = "\(motivationText)"
         
     }
+    
     
     
     // Check FistLine and change FontSize function
@@ -76,48 +71,25 @@ class ViewController: UIViewController {
         let g : CGFloat = CGFloat.random(in: 0.7...1)
         let b : CGFloat = CGFloat.random(in: 0.7...1)
         
+        
+        
         self.view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
     }
     
-    
-    // Notification functions
-    
-    func requestNotificationAuthorization() {
-        let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
-        
-        userNotificationCenter.requestAuthorization(options: authOptions) { success, error in
-            if let error = error {
-                print("Error: \(error)")
-            }
-        }
-    }
-
-    
-    func sendNotification(seconds: Double) {
-        let notificationContent = UNMutableNotificationContent()
-        
-        notificationContent.title = "이정우"
-        notificationContent.body  = "집에서 쉬면서 코딩이나 하고 싶다."
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
-        let request = UNNotificationRequest(identifier: "mainNotification",
-                                            content: notificationContent,
-                                            trigger: trigger)
-
-        userNotificationCenter.add(request) { error in
-            if let error = error {
-                print("Notification Error: ", error)
-            }
-        }
-        
-    }
     
     
     // NextButton Action
     @IBAction func touchUpInsidenextButton(){
         checkNumberForbackButton = randomMotivationNumber
         
-        UIView.transition(with: view, duration: 0.7, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        //animation
+        let rightPushTransition = CATransition()
+        rightPushTransition.type = CATransitionType.push
+        rightPushTransition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        rightPushTransition.duration = 0.5
+        
+        motivationTextLabel.layer.add(rightPushTransition, forKey: CATransitionType.push.rawValue)
+        motivationPersonNameLabel.layer.add(rightPushTransition, forKey: CATransitionType.push.rawValue)
         
         changeRandomBackgroundColor()
         
@@ -139,15 +111,21 @@ class ViewController: UIViewController {
         
         backButton.isEnabled = true
         
-        
-        
     }
+    
     
     
     // BackButton Action
     @IBAction func touchUpInsidebackButton(){
         
-        UIView.transition(with: view, duration: 0.7, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        //animation
+        let leftPushTransition = CATransition()
+        leftPushTransition.type = CATransitionType.push
+        leftPushTransition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        leftPushTransition.duration = 0.5
+        
+        motivationTextLabel.layer.add(leftPushTransition, forKey: CATransitionType.push.rawValue)
+        motivationPersonNameLabel.layer.add(leftPushTransition, forKey: CATransitionType.push.rawValue)
         
         
         changeRandomBackgroundColor()
@@ -166,10 +144,6 @@ class ViewController: UIViewController {
         motivationTextLabel.text = "\(motivationText)"
         
         backButton.isEnabled = false
-        
-    }
-    
-    @IBAction func presentSecondVC(){
         
     }
     
