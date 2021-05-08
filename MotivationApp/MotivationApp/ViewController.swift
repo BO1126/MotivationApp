@@ -72,8 +72,9 @@ class ViewController: UIViewController {
         let b : CGFloat = CGFloat.random(in: 0.7...1)
         
         
-        
-        self.view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        UIView.animate(withDuration: 0.8, animations: {
+            self.view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        })
     }
     
     
@@ -85,13 +86,13 @@ class ViewController: UIViewController {
         //animation
         let rightPushTransition = CATransition()
         rightPushTransition.type = CATransitionType.push
+        rightPushTransition.subtype = .fromRight
         rightPushTransition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         rightPushTransition.duration = 0.5
         
         motivationTextLabel.layer.add(rightPushTransition, forKey: CATransitionType.push.rawValue)
-        motivationPersonNameLabel.layer.add(rightPushTransition, forKey: CATransitionType.push.rawValue)
         
-        changeRandomBackgroundColor()
+//        changeRandomBackgroundColor()
         
         // 랜덤으로 처음 나왔던 text를 제외한 text를 적용
         randomMotivationNumber = Int.random(in: 2...(Motivations.count-1))
@@ -121,14 +122,14 @@ class ViewController: UIViewController {
         //animation
         let leftPushTransition = CATransition()
         leftPushTransition.type = CATransitionType.push
+        leftPushTransition.subtype = .fromLeft
         leftPushTransition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         leftPushTransition.duration = 0.5
         
         motivationTextLabel.layer.add(leftPushTransition, forKey: CATransitionType.push.rawValue)
-        motivationPersonNameLabel.layer.add(leftPushTransition, forKey: CATransitionType.push.rawValue)
         
         
-        changeRandomBackgroundColor()
+//        changeRandomBackgroundColor()
         
         if checkNumberForbackButton % 2 == 0 {
             motivationPersonName = Motivations[self.checkNumberForbackButton]

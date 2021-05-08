@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfT-jT-lkh">
-                                <rect key="frame" x="20" y="54" width="45" height="33"/>
+                                <rect key="frame" x="20" y="829" width="45" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="도움말"/>
                             </button>
@@ -64,11 +64,11 @@
                             <constraint firstItem="xfT-jT-lkh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fw5-Uh-afy"/>
                             <constraint firstItem="eQe-FA-mUB" firstAttribute="top" secondItem="oca-YT-HVw" secondAttribute="bottom" constant="200" id="Jct-mY-6Ix"/>
                             <constraint firstItem="7dY-vY-KbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="QGM-My-VyP"/>
-                            <constraint firstItem="xfT-jT-lkh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QmK-UQ-BaV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eQe-FA-mUB" secondAttribute="bottom" constant="92" id="TpS-hX-UH5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CAC-Ms-inf" secondAttribute="bottom" constant="100" id="VzE-Y6-nld"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CAC-Ms-inf" secondAttribute="trailing" constant="100" id="ZJh-Ny-Q8o"/>
                             <constraint firstItem="7dY-vY-KbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKy-UY-fRN"/>
+                            <constraint firstItem="xfT-jT-lkh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hWX-bW-4dR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adD-Dn-7F1" secondAttribute="bottom" constant="100" id="lPF-WY-eBj"/>
                             <constraint firstItem="oca-YT-HVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p7L-cW-yLe"/>
                             <constraint firstItem="eQe-FA-mUB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vcr-42-8qg"/>
@@ -97,6 +97,9 @@
                                 <rect key="frame" x="151.5" y="734" width="111" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="집중 시작"/>
+                                <connections>
+                                    <action selector="touchUpInsideStartButton" destination="qEQ-yd-nK7" eventType="touchUpInside" id="NTh-Yy-5ZC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxU-ag-0d1">
                                 <rect key="frame" x="362" y="44" width="32" height="34"/>
@@ -114,7 +117,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MX0-Jz-nhZ"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.88627450980392153" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MX0-Jz-nhZ" firstAttribute="trailing" secondItem="fxU-ag-0d1" secondAttribute="trailing" constant="20" id="9B6-4s-mXU"/>
                             <constraint firstItem="Gbk-FR-uJt" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="QQz-aI-aRK"/>

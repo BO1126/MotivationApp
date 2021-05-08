@@ -50,4 +50,8 @@ class SecondViewController : UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func touchUpInsideStartButton(){
+        UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+    }
+    
 }
