@@ -44,19 +44,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-FA-mUB">
-                                <rect key="frame" x="186.5" y="734" width="41" height="36"/>
+                                <rect key="frame" x="169.5" y="734" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="시간 설정"/>
                                 <connections>
-                                    <segue destination="qEQ-yd-nK7" kind="presentation" id="XDo-wQ-t4J"/>
+                                    <action selector="presentSecondVC" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2e-DE-jIZ"/>
+                                    <segue destination="qEQ-yd-nK7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XDo-wQ-t4J"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfT-jT-lkh">
+                                <rect key="frame" x="20" y="54" width="45" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="도움말"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.88532477320971825" blue="0.99353095065708275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="adD-Dn-7F1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="5xt-Z2-0cM"/>
+                            <constraint firstItem="xfT-jT-lkh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fw5-Uh-afy"/>
                             <constraint firstItem="7dY-vY-KbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="QGM-My-VyP"/>
+                            <constraint firstItem="xfT-jT-lkh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QmK-UQ-BaV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eQe-FA-mUB" secondAttribute="bottom" constant="92" id="TpS-hX-UH5"/>
                             <constraint firstItem="oca-YT-HVw" firstAttribute="top" secondItem="7dY-vY-KbK" secondAttribute="bottom" constant="40" id="VWB-sU-3oy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CAC-Ms-inf" secondAttribute="bottom" constant="100" id="VzE-Y6-nld"/>
@@ -83,16 +91,24 @@
             <objects>
                 <viewController id="qEQ-yd-nK7" customClass="SecondViewController" customModule="MotivationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Km-hX-vhf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmf-PO-7U2">
-                                <rect key="frame" x="176" y="700" width="62" height="48"/>
+                                <rect key="frame" x="176.5" y="734" width="61" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="시작!"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxU-ag-0d1">
+                                <rect key="frame" x="362" y="44" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="취소"/>
+                                <connections>
+                                    <action selector="touchUpInsideCancleButton" destination="qEQ-yd-nK7" eventType="touchUpInside" id="RQ2-vr-V0f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbk-FR-uJt">
-                                <rect key="frame" x="114" y="300" width="186" height="84"/>
+                                <rect key="frame" x="114" y="344" width="186" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,10 +117,12 @@
                         <viewLayoutGuide key="safeArea" id="MX0-Jz-nhZ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MX0-Jz-nhZ" firstAttribute="trailing" secondItem="fxU-ag-0d1" secondAttribute="trailing" constant="20" id="9B6-4s-mXU"/>
                             <constraint firstItem="Gbk-FR-uJt" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="QQz-aI-aRK"/>
-                            <constraint firstItem="MX0-Jz-nhZ" firstAttribute="bottom" secondItem="Pmf-PO-7U2" secondAttribute="bottom" constant="60" id="UMb-hm-8HI"/>
                             <constraint firstItem="Gbk-FR-uJt" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="300" id="a6C-m4-wFW"/>
+                            <constraint firstItem="fxU-ag-0d1" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" id="aTY-jj-kR5"/>
                             <constraint firstItem="Pmf-PO-7U2" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="ji1-xc-VMM"/>
+                            <constraint firstItem="MX0-Jz-nhZ" firstAttribute="bottom" secondItem="Pmf-PO-7U2" secondAttribute="bottom" constant="80" id="uGS-aE-4Yn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hOH-he-doT"/>

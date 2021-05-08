@@ -8,8 +8,8 @@
 import UIKit
 
 class SecondViewController : UIViewController {
-    
-    
-    
+    @IBAction func touchUpInsideCancleButton(){
+        dismiss(animated: true)
+    }
     
 }
