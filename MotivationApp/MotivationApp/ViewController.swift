@@ -65,19 +65,6 @@ class ViewController: UIViewController {
     }
     
     
-    // Random Background Color function
-    func changeRandomBackgroundColor(){
-        let r : CGFloat = CGFloat.random(in: 0.7...1)
-        let g : CGFloat = CGFloat.random(in: 0.7...1)
-        let b : CGFloat = CGFloat.random(in: 0.7...1)
-        
-        
-        UIView.animate(withDuration: 0.8, animations: {
-            self.view.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
-        })
-    }
-    
-    
     
     // NextButton Action
     @IBAction func touchUpInsidenextButton(){
@@ -91,8 +78,6 @@ class ViewController: UIViewController {
         rightPushTransition.duration = 0.5
         
         motivationTextLabel.layer.add(rightPushTransition, forKey: CATransitionType.push.rawValue)
-        
-//        changeRandomBackgroundColor()
         
         // 랜덤으로 처음 나왔던 text를 제외한 text를 적용
         randomMotivationNumber = Int.random(in: 2...(Motivations.count-1))
@@ -127,9 +112,6 @@ class ViewController: UIViewController {
         leftPushTransition.duration = 0.5
         
         motivationTextLabel.layer.add(leftPushTransition, forKey: CATransitionType.push.rawValue)
-        
-        
-//        changeRandomBackgroundColor()
         
         if checkNumberForbackButton % 2 == 0 {
             motivationPersonName = Motivations[self.checkNumberForbackButton]
