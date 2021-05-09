@@ -53,7 +53,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.74942472691304651" green="0.6291302436853381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.87073412406689998" green="0.76631979245332127" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="adD-Dn-7F1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="5xt-Z2-0cM"/>
                             <constraint firstItem="eQe-FA-mUB" firstAttribute="top" secondItem="oca-YT-HVw" secondAttribute="bottom" constant="200" id="Jct-mY-6Ix"/>
@@ -87,19 +87,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmf-PO-7U2">
-                                <rect key="frame" x="151.5" y="734" width="111" height="48"/>
+                                <rect key="frame" x="181" y="734" width="52" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="집중 시작"/>
+                                <state key="normal" title="시작"/>
                                 <connections>
                                     <action selector="touchUpInsideStartButton" destination="qEQ-yd-nK7" eventType="touchUpInside" id="NTh-Yy-5ZC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbk-FR-uJt">
-                                <rect key="frame" x="114" y="344" width="186" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxU-ag-0d1">
                                 <rect key="frame" x="20" y="64" width="32" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -108,14 +102,17 @@
                                     <action selector="touchUpInsideCancleButton" destination="qEQ-yd-nK7" eventType="touchUpInside" id="RQ2-vr-V0f"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ7-fB-sfA">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MX0-Jz-nhZ"/>
-                        <color key="backgroundColor" red="0.74942472691304651" green="0.6291302436853381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.87073412406689998" green="0.76631979245332127" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fxU-ag-0d1" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="20" id="Hga-5M-UiD"/>
                             <constraint firstItem="fxU-ag-0d1" firstAttribute="leading" secondItem="MX0-Jz-nhZ" secondAttribute="leading" constant="20" id="MaL-ZT-I43"/>
-                            <constraint firstItem="Gbk-FR-uJt" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="QQz-aI-aRK"/>
-                            <constraint firstItem="Gbk-FR-uJt" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="300" id="a6C-m4-wFW"/>
+                            <constraint firstItem="pZ7-fB-sfA" firstAttribute="centerY" secondItem="1Km-hX-vhf" secondAttribute="centerY" id="a2v-ly-f9D"/>
+                            <constraint firstItem="pZ7-fB-sfA" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="gfK-6h-u5I"/>
                             <constraint firstItem="Pmf-PO-7U2" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="ji1-xc-VMM"/>
                             <constraint firstItem="MX0-Jz-nhZ" firstAttribute="bottom" secondItem="Pmf-PO-7U2" secondAttribute="bottom" constant="80" id="uGS-aE-4Yn"/>
                         </constraints>

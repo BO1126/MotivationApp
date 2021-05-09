@@ -10,6 +10,8 @@ import UserNotifications
 
 class SecondViewController : UIViewController {
     
+    let timepicker = UIDatePicker()
+    
     // Notification functions
     
     let userNotificationCenter = UNUserNotificationCenter.current()
