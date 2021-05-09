@@ -10,7 +10,27 @@ import UserNotifications
 
 class SecondViewController : UIViewController {
     
-    let timepicker = UIDatePicker()
+    @IBOutlet weak var timePicker : UIDatePicker!
+    @IBOutlet weak var timeLabel : UILabel!
+    
+    var timeInt : Int = Int()
+    
+    
+    @IBAction func didTimePickerValueChanged(_ sender : UIDatePicker){
+        self.timeInt = Int(self.timePicker.countDownDuration) / 60
+        if timeInt >= 60{
+            let hour : Int = timeInt / 60
+            let minit : Int = timeInt % 60
+            self.timeLabel.text = "\(hour)시간 \(minit)분"
+            if minit == 0 {
+                self.timeLabel.text = "\(hour)시간"
+            }
+        }else{
+            self.timeLabel.text = "\(timeInt)분"
+        }
+        
+    }
+    
     
     // Notification functions
     
@@ -28,10 +48,11 @@ class SecondViewController : UIViewController {
 
     
     func sendNotification(seconds: Double) {
+        
         let notificationContent = UNMutableNotificationContent()
         
         notificationContent.title = "이정우"
-        notificationContent.body  = "집에서 쉬면서 코딩이나 하고 싶다."
+        notificationContent.body  = self.timeLabel.text!
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
         let request = UNNotificationRequest(identifier: "mainNotification",
@@ -53,6 +74,7 @@ class SecondViewController : UIViewController {
     }
     
     @IBAction func touchUpInsideStartButton(){
+        sendNotification(seconds: 1)
         UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
     }
     

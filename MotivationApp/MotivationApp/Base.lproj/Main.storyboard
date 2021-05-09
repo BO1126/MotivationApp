@@ -53,7 +53,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.87073412406689998" green="0.76631979245332127" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.95801464160839156" green="0.85904720279720281" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="adD-Dn-7F1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="5xt-Z2-0cM"/>
                             <constraint firstItem="eQe-FA-mUB" firstAttribute="top" secondItem="oca-YT-HVw" secondAttribute="bottom" constant="200" id="Jct-mY-6Ix"/>
@@ -102,22 +102,38 @@
                                     <action selector="touchUpInsideCancleButton" destination="qEQ-yd-nK7" eventType="touchUpInside" id="RQ2-vr-V0f"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ7-fB-sfA">
-                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="10" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ7-fB-sfA">
+                                <rect key="frame" x="40" y="338" width="334" height="216"/>
+                                <connections>
+                                    <action selector="didTimePickerValueChanged:" destination="qEQ-yd-nK7" eventType="valueChanged" id="G4Q-GN-QFT"/>
+                                </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIp-UZ-o3R">
+                                <rect key="frame" x="184" y="204" width="46.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MX0-Jz-nhZ"/>
-                        <color key="backgroundColor" red="0.87073412406689998" green="0.76631979245332127" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.95801464160839156" green="0.85904720279720281" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="aIp-UZ-o3R" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="8dE-Es-Tgc"/>
+                            <constraint firstItem="MX0-Jz-nhZ" firstAttribute="trailing" secondItem="pZ7-fB-sfA" secondAttribute="trailing" constant="40" id="95R-t2-f3J"/>
                             <constraint firstItem="fxU-ag-0d1" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="20" id="Hga-5M-UiD"/>
                             <constraint firstItem="fxU-ag-0d1" firstAttribute="leading" secondItem="MX0-Jz-nhZ" secondAttribute="leading" constant="20" id="MaL-ZT-I43"/>
-                            <constraint firstItem="pZ7-fB-sfA" firstAttribute="centerY" secondItem="1Km-hX-vhf" secondAttribute="centerY" id="a2v-ly-f9D"/>
-                            <constraint firstItem="pZ7-fB-sfA" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="gfK-6h-u5I"/>
+                            <constraint firstItem="pZ7-fB-sfA" firstAttribute="leading" secondItem="MX0-Jz-nhZ" secondAttribute="leading" constant="40" id="eS7-2w-jjL"/>
+                            <constraint firstItem="Pmf-PO-7U2" firstAttribute="top" secondItem="pZ7-fB-sfA" secondAttribute="bottom" constant="180" id="hy3-WB-JY6"/>
                             <constraint firstItem="Pmf-PO-7U2" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="ji1-xc-VMM"/>
+                            <constraint firstItem="aIp-UZ-o3R" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="160" id="lpi-Mk-v28"/>
                             <constraint firstItem="MX0-Jz-nhZ" firstAttribute="bottom" secondItem="Pmf-PO-7U2" secondAttribute="bottom" constant="80" id="uGS-aE-4Yn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hOH-he-doT"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="aIp-UZ-o3R" id="NGq-tD-aAm"/>
+                        <outlet property="timePicker" destination="pZ7-fB-sfA" id="mR9-Cp-W0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FB-Oi-FLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
