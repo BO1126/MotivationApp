@@ -65,7 +65,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     // NextButton Action
     @IBAction func touchUpInsidenextButton(){
         checkNumberForbackButton = randomMotivationNumber

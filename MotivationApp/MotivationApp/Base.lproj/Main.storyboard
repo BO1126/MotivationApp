@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="시간 설정"/>
                                 <connections>
-                                    <segue destination="qEQ-yd-nK7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XDo-wQ-t4J"/>
+                                    <segue destination="qEQ-yd-nK7" kind="presentation" identifier="rvc" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XDo-wQ-t4J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FB-Oi-FLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="76"/>
+            <point key="canvasLocation" x="972" y="76"/>
         </scene>
     </scenes>
     <resources>
