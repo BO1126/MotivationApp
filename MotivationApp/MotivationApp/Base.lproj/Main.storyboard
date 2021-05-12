@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="시간 설정"/>
                                 <connections>
-                                    <segue destination="qEQ-yd-nK7" kind="presentation" identifier="rvc" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XDo-wQ-t4J"/>
+                                    <segue destination="qEQ-yd-nK7" kind="presentation" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XDo-wQ-t4J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,8 +108,8 @@
                                     <action selector="didTimePickerValueChanged:" destination="qEQ-yd-nK7" eventType="valueChanged" id="G4Q-GN-QFT"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIp-UZ-o3R">
-                                <rect key="frame" x="184" y="204" width="46.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIp-UZ-o3R">
+                                <rect key="frame" x="171.5" y="269" width="71.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,10 +122,10 @@
                             <constraint firstItem="MX0-Jz-nhZ" firstAttribute="trailing" secondItem="pZ7-fB-sfA" secondAttribute="trailing" constant="40" id="95R-t2-f3J"/>
                             <constraint firstItem="fxU-ag-0d1" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="20" id="Hga-5M-UiD"/>
                             <constraint firstItem="fxU-ag-0d1" firstAttribute="leading" secondItem="MX0-Jz-nhZ" secondAttribute="leading" constant="20" id="MaL-ZT-I43"/>
+                            <constraint firstItem="pZ7-fB-sfA" firstAttribute="top" secondItem="aIp-UZ-o3R" secondAttribute="bottom" constant="40" id="NYe-HG-uul"/>
                             <constraint firstItem="pZ7-fB-sfA" firstAttribute="leading" secondItem="MX0-Jz-nhZ" secondAttribute="leading" constant="40" id="eS7-2w-jjL"/>
                             <constraint firstItem="Pmf-PO-7U2" firstAttribute="top" secondItem="pZ7-fB-sfA" secondAttribute="bottom" constant="180" id="hy3-WB-JY6"/>
                             <constraint firstItem="Pmf-PO-7U2" firstAttribute="centerX" secondItem="1Km-hX-vhf" secondAttribute="centerX" id="ji1-xc-VMM"/>
-                            <constraint firstItem="aIp-UZ-o3R" firstAttribute="top" secondItem="MX0-Jz-nhZ" secondAttribute="top" constant="160" id="lpi-Mk-v28"/>
                             <constraint firstItem="MX0-Jz-nhZ" firstAttribute="bottom" secondItem="Pmf-PO-7U2" secondAttribute="bottom" constant="80" id="uGS-aE-4Yn"/>
                         </constraints>
                     </view>

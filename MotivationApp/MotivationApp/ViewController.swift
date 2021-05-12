@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         "조지 버나드 쇼","나는 10번 시도하면 9번 실패했다.\n그래서 10번씩 시도했다.",
         "발타사르 그라시안","우리가 진정으로 소유하는 것은 시간 뿐이다.\n가진 것이 달리 아무 것도 없는 이에게도\n시간은 있다.",
         "존 웨인","내일은 우리가 어제로부터\n무엇인가 배웠기를 바란다.",
-        "피터 드러커","10분 뒤와 10년 후를 동시에 생각하라."
+        "피터 드러커","10분 뒤와 10년 후를 동시에 생각하라.",
+        "세상에서 가장 빠른 인디언 중","가야할 때 가지 않으면\n가려 할 때 갈 수 없다."
         
     ]
     
@@ -128,8 +129,15 @@ class ViewController: UIViewController {
         backButton.isEnabled = false
         
     }
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? SecondViewController else {
+            return
+        }
+        rvc.notificationMotivationText = self.motivationText
+        rvc.notificationMotivationPersonName = self.motivationPersonName
+    }
+
 
 }
 

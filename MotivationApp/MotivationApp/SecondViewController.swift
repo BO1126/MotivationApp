@@ -10,23 +10,32 @@ import UserNotifications
 
 class SecondViewController : UIViewController {
     
+    
     @IBOutlet weak var timePicker : UIDatePicker!
     @IBOutlet weak var timeLabel : UILabel!
     
     var timeInt : Int = Int()
-    
+    var notificationMotivationText : String = String()
+    var notificationMotivationPersonName : String = String()
     
     @IBAction func didTimePickerValueChanged(_ sender : UIDatePicker){
         self.timeInt = Int(self.timePicker.countDownDuration) / 60
+        
         if timeInt >= 60{
             let hour : Int = timeInt / 60
             let minit : Int = timeInt % 60
-            self.timeLabel.text = "\(hour)시간 \(minit)분"
-            if minit == 0 {
-                self.timeLabel.text = "\(hour)시간"
+            
+            if hour < 10 {
+                self.timeLabel.text = "0\(hour) : \(minit)"
+            }else{
+                self.timeLabel.text = "\(hour) : \(minit)"
+            }
+            
+            if minit == 0{
+                self.timeLabel.text = "\(hour) : 00"
             }
         }else{
-            self.timeLabel.text = "\(timeInt)분"
+            self.timeLabel.text = "00 : \(timeInt)"
         }
         
     }
@@ -51,8 +60,8 @@ class SecondViewController : UIViewController {
         
         let notificationContent = UNMutableNotificationContent()
         
-        notificationContent.title = "이정우"
-        notificationContent.body  = self.timeLabel.text!
+        notificationContent.title = self.notificationMotivationPersonName
+        notificationContent.body  = self.notificationMotivationText
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
         let request = UNNotificationRequest(identifier: "mainNotification",
