@@ -32,7 +32,11 @@ class SecondViewController : UIViewController {
             }
             
             if minit == 0{
-                self.timeLabel.text = "\(hour) : 00"
+                if hour < 10 {
+                    self.timeLabel.text = "0\(hour) : 00"
+                }else{
+                    self.timeLabel.text = "\(hour) : 00"
+                }
             }
         }else{
             self.timeLabel.text = "00 : \(timeInt)"
@@ -60,7 +64,7 @@ class SecondViewController : UIViewController {
         
         let notificationContent = UNMutableNotificationContent()
         
-        notificationContent.title = self.notificationMotivationPersonName
+        notificationContent.title = "- \(self.notificationMotivationPersonName)"
         notificationContent.body  = self.notificationMotivationText
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
@@ -75,7 +79,6 @@ class SecondViewController : UIViewController {
         }
         
     }
-    
     
     
     @IBAction func touchUpInsideCancleButton(){
