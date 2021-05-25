@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Hero
 
 class ViewController: UIViewController {
     
@@ -141,7 +140,7 @@ class ViewController: UIViewController {
         rvc.notificationMotivationText = self.motivationText
         rvc.notificationMotivationPersonName = self.motivationPersonName
     }
-
-
+    
+    
 }
 
